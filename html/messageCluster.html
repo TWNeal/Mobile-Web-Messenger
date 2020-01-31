@@ -1,0 +1,14 @@
+<div class="messageCluster-container messageCluster-isMe-{{isMe}}">
+    <div class="messageCluster-sentByContainer">
+        <profile-thumbnail ng-if="!isMe" class="messageCluster-profileThumbnail" image="image" dir="right" border-color="{{color}}"></profile-thumbnail>
+    </div>
+    <div class="messageCluster-clusterContainer">
+        <div ng-if="isGroup && !isMe" class="messageCluster-sentByName">{{name}}</div>
+        <div class="messageCluster-messageRepeat" ng-repeat="(dateTime, message) in cluster.messages">
+            <message content="message.content" bg-color="{{color}}" font-color="{{fontColor}}" repeat-complete="repeatComplete" in-last-cluster="isLastCluster"></message> <!-- class="messageCluster-messageContainer {{}}" -->
+        </div>
+    </div>
+    <div class="messageCluster-sentByContainer">
+        <profile-thumbnail ng-if="isMe" class="messageCluster-profileThumbnail" image="image" dir="left" border-color="{{color}}"></profile-thumbnail>
+    </div>
+</div>

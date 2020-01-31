@@ -1,0 +1,48 @@
+<div class="threadView-container">
+    <div class="threadView-topBar" ng-style="{'height': .18 * viewWidth + 'px'}">
+        <div class="threadView-exitButtonWrapper" ng-click="backButton()">
+            <div class="threadView-exitButton">
+                <img class="threadView-exitImage" src="img/close-button-hd.png" />
+            </div>
+        </div>
+        <div class="threadView-toProfileButtonWrapper">
+            <div class="threadView-toProfileButton">
+                <!--<img src="" />-->
+            </div>
+        </div>
+        <div class="threadView-titleWrapper" ng-style="{'background-color': primaryColor}">
+            <div class="threadView-title" ng-style="{'color': colors.textOnPrimary}">{{title}}</div>
+        </div>
+    </div>
+    <div class="threadView-contentSection">
+        <div class="threadView-contentShadow" ng-style="shadowStyle"></div>
+        <div class="threadView-scroller" id="threadView-scroller" ng-style="{'background-color': colors.backgroundThread}">
+            <div class="threadView-contentWindow">
+                <div class="threadView-content">
+                    <div class="threadView-clusterRepeat" ng-repeat="cluster in clusters">
+                        <message-cluster class="threadView-messageCluster" cluster="cluster" is-group="isGroup" repeat-complete="onScrollerInit" colors="colors"></message-cluster>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="threadView-inputBar" ng-style="{'background-color': primaryColor, 'min-height': .18 * viewWidth + 'px'}">
+        <div class="threadView-input">
+            <div class="threadView-textBoxWrapper" ng-style="{'max-height': .32 * viewHeight + 'px', 'padding': (viewWidth * .018) + 'px 0 ' + (viewWidth * .018) + 'px ' + (viewWidth * .018) + 'px'}"> <!-- Ensure that when selected, allows emojis on keyboard. -->
+                <div class="threadView-textBox" ng-style="{'padding': '0 ' + (.018 * viewWidth) + 'px'}">
+                    <div class="threadView-textBoxContent" contentEditable="true" placeholder="Write a message..." ng-model="unsubmittedMessage" ng-style="{'padding': (.037 * viewWidth) + 'px 0', 'min-height': .07 * viewWidth + 'px'}"></div>
+                </div> 
+            </div>
+            <div class="threadView-inputButtonWrapper" ng-click="submitMessage()">
+                <div class="threadView-inputButton" ng-style="{'height': (.144 * viewWidth) + 'px', 'width': (.144 * viewWidth) + 'px', 'left': (.018 * viewWidth) + 'px', 'bottom': (.018 * viewWidth) + 'px'}">
+                    <img class="threadView-inputImage" src="{{inputButtonURL}}" />
+                </div> <!-- When text box is empty, button that lets you insert picture. Otherwise, send button -->
+            </div>
+        </div>
+        <div class="threadView-scrollToBottomBar" ng-style="{'background-color': primaryColor}">
+            <div class="threadView-scrollToBottomButton" ng-click="scrollToBottom()" ng-style="{'background-color': primaryColor, 'padding': (.018 * viewWidth) + 'px'}">
+                <div class="threadView-scrollToBottomText">{{scrollToBottomText}}</div>
+            </div>
+        </div>
+    </div>
+</div>

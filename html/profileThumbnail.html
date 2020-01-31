@@ -1,0 +1,14 @@
+<div class="profileThumbnail-container">
+    <div class="profileThumbnail-bottomAlign">
+        <div class="profileThumbnail-circle profileThumbnail-{{otherDir}}">
+            <div class="profileThumbnail-photoPadding">
+                <div class="profileThumbnail-photoContainer">
+                    <img src="{{photoURL}}" class="profileThumbnail-photo" />
+                </div>
+            </div>
+            <div class="profileThumbnail-photoBorder" ng-style="{'background-color': borderColor}"></div>
+        </div>
+        <div ng-if="direction == 'left'" class="profileThumbnail-arrow profileThumbnail-left" ng-style="borderStyle"></div>
+        <div ng-if="direction == 'right'" class="profileThumbnail-arrow profileThumbnail-right" ng-style="borderStyle"></div>
+    </div>
+</div>

@@ -1,0 +1,47 @@
+.messageCluster-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    margin: 2% /*2vw*/ 0 0 0;
+}
+    .messageCluster-sentByContainer {
+        width: 20%; /* This times two plus the messageCluster-clusterContainer width must be equal to 100vw */
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+        .messageCluster-profileThumbnail {
+            padding: 0 1%; /*1vw;*/
+        }
+    .messageCluster-clusterContainer {
+        width: 60%; /* This and the messageCluster-sentByContainer width must be equal to 100vw */
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+        .messageCluster-alignContainer {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+            .messageCluster-align {
+                width: 100%;
+                height: auto;
+            }
+                .messageCluster-sentByName {
+                    
+                }
+                .messageCluster-messageRepeat {
+                    
+                }
+                    /* message */
+    .messageCluster-isMe-false .messageCluster-clusterContainer {
+        text-align: left;
+    }
+    .messageCluster-isMe-true .messageCluster-clusterContainer {
+        text-align: right;
+    }

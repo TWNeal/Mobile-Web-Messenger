@@ -1,0 +1,16 @@
+<div class="threadPreview-container" ng-click="onClick()">
+    <profile-thumbnail class="threadPreview-profileThumbnail" image="image" dir="right" border-color="{{color}}" on-load="onThumbnailLoaded"></profile-thumbnail>
+    <div class="threadPreview-info" ng-style="{'background-color': color}">
+        <div class="threadPreview-nameContainer">
+            <div class="threadPreview-name" ng-style="{'color': colors.textOnPrimary}">{{name}}</div>
+        </div>
+        <div class="threadPreview-activityContainer">
+            <div class="threadPreview-activity">
+                <div class="threadPreview-activityForeground">
+                    <div class="threadPreview-activityText" ng-style="{'color': colors.textOnSecondary}">{{thread.lastMessage.content}}</div>
+                </div>
+                <div class="threadPreview-activityBackground" ng-style="{'background-color': colors.secondary}"></div>
+            </div>
+        </div>
+    </div>
+</div>

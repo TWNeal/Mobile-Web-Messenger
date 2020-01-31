@@ -1,0 +1,70 @@
+.threadPreview-container {
+    /*height: 22.5%; /*22.5vw;*/
+    margin: 0 auto 5% /*4vw*/ auto;
+    display: flex;
+    flex-direction: row;
+}
+    .threadPreview-profileThumbnail {
+        width: 30%; /*25vw;*/
+        padding-right: 1%;/*1vw;*/
+    }
+        /* profileThumbnail */
+    .threadPreview-info {
+        flex: 1;
+        box-sizing: border-box;
+        overflow: hidden;
+        background-color: blue;
+        border-radius: 10px;
+    }
+        .threadPreview-nameContainer {
+            position: relative;
+            height: 50%;
+            width: 100%;
+            padding: 4% 6% 2% 6%;
+            box-sizing: border-box;
+        }
+            .threadPreview-name {
+                height: 100%;
+                width: 100%;
+                font-weight: bold;
+                color: white;
+                /*opacity: 0.9;*/
+                text-shadow: 1px 1px 0px rgba(0, 0, 0, .3);
+            }
+        .threadPreview-activityContainer {
+            height: 50%;
+            width: 100%;
+            padding: 0% 6% 6% 6%;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+            .threadPreview-activity {
+                position: relative;
+                height: 100%;
+                width: 100%;
+            }
+                .threadPreview-activityForeground {
+                    position: absolute;
+                    z-index: 2;
+                    padding: 1.72% 1.72%; /*1vw 1vw;*/
+                    height: 100%;
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+                    .threadPreview-activityText {
+                        height: 100%;
+                        width: auto;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        o-text-overflow: ellipsis;
+                        text-overflow: ellipsis;
+                    }
+                .threadPreview-activityBackground {
+                    position: absolute;
+                    z-index: 1;
+                    height: 100%;
+                    width: 100%;
+                    box-sizing: border-box;
+                    background-color: white;
+                    opacity: 0.85;
+                }

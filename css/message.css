@@ -1,0 +1,28 @@
+.message-container {
+    display: inline-block;
+    max-width: 100%;
+    margin-top: 1%; /*1vw;*/
+}
+    .message-messageBox {
+        width: 100%;
+        display: inline-block;
+        box-sizing: border-box;
+        padding: .6rem .9rem; /*padding: 2vw 3vw;*/
+        border-radius: 20px;
+    }
+    .messageCluster-isMe-false .message-messageBox {
+        background-color: blue;
+        color: white;
+    }
+    .messageCluster-isMe-true .message-messageBox {
+        background-color: white;
+    }
+        .message-messageText {
+            display: inline-block;
+            width: 100%;
+            text-align: left;
+            word-wrap: break-word;
+        }
+    .messageCluster-messagePhoto {
+        
+    }

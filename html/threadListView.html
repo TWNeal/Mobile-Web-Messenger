@@ -1,0 +1,13 @@
+<div class="threadListView-container" ng-style="{'background-color': colors.backgroundHome}">
+    <div class="threadListView-topBar" ng-style="{ 'height': .18 * viewWidth + 'px', 'background-color': color }">
+        <div class="threadListView-topBarText">Messages</div>
+    </div>
+    <div class="threadListView-contentArea">
+        <div class="threadListView-shadow" ng-style="shadowStyle"></div>
+        <div class="threadListView-scroller" id="threadListView-scroller">
+            <div class="threadListView-content">
+                <thread-preview ng-repeat="thread in threads | orderBy: 'lastMessage.dateTime': true" thread="thread" repeat-complete="onScrollerInit"></thread-preview>
+            </div>
+        </div>
+    </div>
+</div>

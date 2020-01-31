@@ -1,0 +1,50 @@
+.threadListView-container {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+}
+    .threadListView-topBar {
+        position: relative;
+        background-color: #262626;
+        color: white;
+        font-weight: bold;
+    }
+        .threadListView-topBarText {
+            position: absolute;
+            top: 25%; /* Vertically aligns the div 5% above center (looked better than completely center with a word that had hanging letters) */
+            height: 50%;
+            width: 100%;
+            text-align: center;
+            line-height: 100%;
+            text-shadow: 1px 1px 0px rgba(0, 0, 0, .3);
+        }
+    .threadListView-contentArea {
+        position: relative;
+        width: 100%;
+        /*height: 100%;*/
+        overflow:hidden;
+        flex: 1;
+    }
+        .threadListView-shadow {
+            position: absolute;
+            z-index: 2;
+            opacity: .5;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        .threadListView-scroller {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+        }
+            .threadListView-content {
+                padding: 6% 6% 2% 6%; /*6vw 6vw 2vw 6vw;*/
+            }
+                /* threadPreview */

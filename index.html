@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <title>Messenger App</title>
+        <!-- Stylesheets -->
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/message.css" />
+        <link rel="stylesheet" type="text/css" href="css/messageCluster.css" />
+        <link rel="stylesheet" type="text/css" href="css/profileThumbnail.css" />
+        <link rel="stylesheet" type="text/css" href="css/threadListView.css" />
+        <link rel="stylesheet" type="text/css" href="css/threadPreview.css" />
+        <link rel="stylesheet" type="text/css" href="css/threadView.css" />
+        <link rel="stylesheet" type="text/css" href="css/view.css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet"> 
+    </head>
+    <body>
+        <div class="messenger" id="messenger1"></div>
+    </body>
+    <!-- Libraries -->
+    <script type="text/javascript" src="lib/angular.js"></script>
+    <script type="text/javascript" src="lib/iscroll-probe.js"></script>
+    <script type="text/javascript" src="lib/greensock/TweenMax.js"></script>
+    <!-- Cordova script (will not be loaded in browser) -->
+    <script type="text/javascript" src="cordova.js"></script>
+    <!-- Application services -->
+    <script type="text/javascript" src="js/dataManager.js"></script>
+    <script type="text/javascript" src="js/users.js"></script>
+    <script type="text/javascript" src="js/threads.js"></script>
+    <script type="text/javascript" src="js/viewManager.js"></script>
+    <!-- Application directives -->
+    <script type="text/javascript" src="js/message.js"></script>
+    <script type="text/javascript" src="js/messageCluster.js"></script>
+    <script type="text/javascript" src="js/profileThumbnail.js"></script>
+    <script type="text/javascript" src="js/threadListView.js"></script>
+    <script type="text/javascript" src="js/threadPreview.js"></script>
+    <script type="text/javascript" src="js/threadView.js"></script>
+    <script type="text/javascript" src="js/view.js"></script>
+    <!-- Application initiation -->
+    <script type="text/javascript" src="js/messenger.js"></script>
+    <script>
+        var pathSplit = window.location.hash.split('#/');
+        if (angular.isDefined(pathSplit) && pathSplit !== null && angular.isDefined(pathSplit[1]) && pathSplit[1] !== null) {
+            pathSplit = pathSplit[1].split('/');
+            if (angular.isDefined(pathSplit[0]) && pathSplit[0] !== null && pathSplit[0] !== "") {
+                var primary = pathSplit[0];
+            } else var primary = 'user-colors';
+            if (angular.isDefined(pathSplit[1]) && pathSplit[1] !== null && pathSplit[1] !== "") {
+                var secondary = pathSplit[1];
+            } else var secondary = 'white';
+        } else {
+            var primary = 'user-colors';
+            var secondary = 'white';
+        }
+        var appColors = {primary: primary, secondary: secondary};
+        var app1 = messenger('messenger1', appColors); // See messenger.js
+        //var app2 = messenger('messenger2', appColors); // See messenger.js
+    </script>
+</html>

@@ -1,0 +1,6 @@
+<div class="message-container">
+    <div ng-if="isText" class="message-messageBox" ng-style="{'background-color': bgColor, 'color': fontColor}">
+        <div class="message-messageText">{{text}}</div>
+    </div>
+    <img ng-if="!isText" src="{{photoURL}}" class="message-messagePhoto" />
+</div>

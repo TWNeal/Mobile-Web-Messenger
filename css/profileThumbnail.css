@@ -1,0 +1,66 @@
+.profileThumbnail-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+    .profileThumbnail-bottomAlign {
+        position: relative;
+        /*display: inline-block;
+        vertical-align: bottom;*/
+        width: 100%;
+        /* height will be modified dynamically using profileThumbnail.js */
+    }
+        .profileThumbnail-circle {
+            position: absolute;
+            z-index: 2;
+            width: 90%;
+            height: 100%;
+        }
+            .profileThumbnail-photoPadding {
+                position: absolute;
+                z-index: 2;
+                padding: 4.5%; /*1vw;*/
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+            }
+                .profileThumbnail-photoContainer {
+                    border-radius: 100%;
+                    overflow: hidden;
+                    height: 100%;
+                    width: 100%;
+                    /*box-sizing: border-box;*/
+                    /*background-color: white;*/
+                }
+                    .profileThumbnail-photo {
+                        width: 100%;
+                    }
+            .profileThumbnail-photoBorder {
+                position: absolute;
+                z-index: 1;
+                border-radius: 100%;
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+            }
+            .messageCluster-isMe-false .profileThumbnail-photoBorder,
+             .profileThumbnail-photoBorder {
+                background-color: blue;
+            }
+            .messageCluster-isMe-true .profileThumbnail-photoBorder {
+                background-color: white;
+            }
+        .profileThumbnail-arrow {
+            position: absolute;
+            height: 0;
+            width: 0;
+            z-index: 1;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .profileThumbnail-left {
+            left: 0;
+        }
+        .profileThumbnail-right {
+            right: 0;
+        }
